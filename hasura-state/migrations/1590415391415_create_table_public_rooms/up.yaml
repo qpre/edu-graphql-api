@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "public"."rooms"("id" serial NOT NULL, "title" text NOT NULL,
+      PRIMARY KEY ("id") , UNIQUE ("id"), UNIQUE ("title"));
+  type: run_sql
+- args:
+    name: rooms
+    schema: public
+  type: add_existing_table_or_view

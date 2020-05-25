@@ -1,0 +1,11 @@
+- args:
+    sql: CREATE TABLE "public"."messages"("id" serial NOT NULL, "user_id" text NOT
+      NULL, "body" text NOT NULL, "room_id" integer NOT NULL, PRIMARY KEY ("id") ,
+      FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON UPDATE restrict
+      ON DELETE restrict, FOREIGN KEY ("room_id") REFERENCES "public"."rooms"("id")
+      ON UPDATE restrict ON DELETE restrict, UNIQUE ("id"));
+  type: run_sql
+- args:
+    name: messages
+    schema: public
+  type: add_existing_table_or_view
