@@ -1,0 +1,40 @@
+- args:
+    name: user
+    table:
+      name: messages
+      schema: public
+    using:
+      foreign_key_constraint_on: user_id
+  type: create_object_relationship
+- args:
+    name: room
+    table:
+      name: messages
+      schema: public
+    using:
+      foreign_key_constraint_on: room_id
+  type: create_object_relationship
+- args:
+    name: messages
+    table:
+      name: rooms
+      schema: public
+    using:
+      foreign_key_constraint_on:
+        column: room_id
+        table:
+          name: messages
+          schema: public
+  type: create_array_relationship
+- args:
+    name: messages
+    table:
+      name: users
+      schema: public
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: messages
+          schema: public
+  type: create_array_relationship

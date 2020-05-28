@@ -1,0 +1,25 @@
+- args:
+    role: user
+    table:
+      name: users
+      schema: public
+  type: drop_select_permission
+- args:
+    permission:
+      allow_aggregations: false
+      columns:
+      - created_at
+      - id
+      - last_room_id
+      - last_seen
+      - last_typed
+      - name
+      computed_fields: []
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+    role: user
+    table:
+      name: users
+      schema: public
+  type: create_select_permission

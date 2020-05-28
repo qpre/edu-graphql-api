@@ -1,0 +1,19 @@
+- args:
+    permission:
+      columns:
+      - id
+      - room_id
+      - body
+      - user_id
+      - created_at
+      - updated_at
+      filter: {}
+      localPresets:
+      - key: ""
+        value: ""
+      set: {}
+    role: user
+    table:
+      name: messages
+      schema: public
+  type: create_update_permission

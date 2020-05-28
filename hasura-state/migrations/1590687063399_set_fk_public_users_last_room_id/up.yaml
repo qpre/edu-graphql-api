@@ -1,0 +1,6 @@
+- args:
+    sql: "\n           alter table \"public\".\"users\"\n           add constraint
+      \"users_last_room_id_fkey\"\n           foreign key (\"last_room_id\")\n           references
+      \"public\".\"rooms\"\n           (\"id\") on update restrict on delete restrict;\n
+      \     "
+  type: run_sql
