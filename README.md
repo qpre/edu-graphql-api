@@ -18,7 +18,7 @@ This repository is meant for students attending the Graph-QL 101 lesson, part of
 
 `./run-api.sh` will start a docker engine for Hasura GraphQL on your machine and start the Hasura Console on http://localhost:9695/. (you'll be asked for the HASURA_GRAPHQL_ADMIN_SECRET in your `.env` to access it)
 
-Once the console has started for the first time, in another terminal, run the migrations: `hasura migrate apply`.
+Once the console has started for the first time, in another terminal, run the migrations: `hasura migrate apply` from the `./hasura-state` directory.
 
 You are good to go !
 
